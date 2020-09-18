@@ -28,6 +28,8 @@ pipeline {
                     //separate container. The pytest container becomes the agent that Jenkins uses to run the Test
                     //stage of your Pipeline project.
                     image 'qnib/pytest'
+                    dockerfile true
+                    label 'docker'
                 }
             }
             steps {
