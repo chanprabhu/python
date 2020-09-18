@@ -4,7 +4,7 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-            agent label{
+            agent none{
                 docker {
                     //This image parameter (of the agent section’s docker parameter) downloads the python:2-alpine
                     //Docker image and runs this image as a separate container. The Python container becomes
@@ -24,7 +24,7 @@ pipeline {
             }
         }
         stage('Test') {
-            agent label{
+            agent none{
                 docker {
                     //This image parameter downloads the qnib:pytest Docker image and runs this image as a
                     //separate container. The pytest container becomes the agent that Jenkins uses to run the Test
